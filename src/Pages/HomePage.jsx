@@ -57,20 +57,20 @@ const HomePage = () => {
             Who Are We?
           </motion.h2>
           <div className="px-10 flex flex-col gap-10 justify-center items-center">
-            <div className="p1 flex items-center mb-4 sm:gap-10">
+            <div className="p1 flex items-center mb-4 sm:gap-10 gap-4">
               <motion.img
-                initial={{ x: -100, opacity: 0 }}
+                initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 src="/img_2.png"
                 alt=""
-                className="sm:w-[20%] w-[15%] sm:mr-4 mr-16"
+                className="sm:w-[20%] w-[20%]"
               />
               <motion.h4
                 initial={{ x: 100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="sm:text-2xl text-sm text-white font-semibold"
+                className="sm:text-2xl text-[13px] text-white font-semibold"
               >
                 • Here you can share your Secrets
               </motion.h4>
@@ -80,7 +80,7 @@ const HomePage = () => {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="sm:text-2xl text-sm text-white font-semibold mr-4"
+                className="sm:text-2xl text-[13px] text-white font-semibold mr-4"
               >
                 • Nobody will be knowing who you are
               </motion.h4>
@@ -90,7 +90,7 @@ const HomePage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 src="/img_3.png"
                 alt=""
-                className="sm:w-[20%] w-[25%]"
+                className="sm:w-[20%] w-[30%]"
               />
             </div>
             <div className="p3 flex items-center gap-10 sm:ms-20 ms-5 mb-5">
@@ -100,7 +100,7 @@ const HomePage = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 src="/img_4.png"
                 alt=""
-                className="sm:w-[20%] w-[25%] mr-4"
+                className="sm:w-[20%] w-[26%] mr-4"
               />
               <motion.h4
                 initial={{ x: 100, opacity: 0 }}
