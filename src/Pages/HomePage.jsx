@@ -57,14 +57,14 @@ const HomePage = () => {
             Who Are We?
           </motion.h2>
           <div className="px-10 flex flex-col gap-10 justify-center items-center">
-            <div className="p1 flex items-center mb-4 gap-10">
+            <div className="p1 flex items-center mb-4 sm:gap-10">
               <motion.img
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 src="/img_2.png"
                 alt=""
-                className="sm:w-[20%] w-[15%] mr-4"
+                className="sm:w-[20%] w-[15%] sm:mr-4 mr-16"
               />
               <motion.h4
                 initial={{ x: 100, opacity: 0 }}
