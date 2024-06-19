@@ -89,7 +89,7 @@ const Auth = ({ register }) => {
       <Header />
       <div className="top-0 z-[-2] h-auto w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
         <div className="w-full h-screen flex items-center justify-center">
-          <div className="relative sm:w-[50%] w-[95%] bg-[#1a171734]  sm:h-[75%] h-[55%] rounded-3xl border-2 border-[#1a1717]">
+          <div className="relative sm:w-[50%] w-[95%] bg-[#1a171734]  sm:h-[75%] h-[63%] rounded-3xl border-2 border-[#1a1717]">
             <AnimatePresence>
               {register ? (
                 <motion.h1
@@ -129,11 +129,11 @@ const Auth = ({ register }) => {
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: -20, opacity: 0 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
-                    className="flex items-center justify-center gap-10 mt-5"
+                    className="flex items-center justify-center sm:gap-10 gap-7 mt-5"
                   >
                     <label
                       htmlFor=""
-                      className="text-2xl font-semibold text-white"
+                      className="sm:text-2xl text-lg font-semibold text-white"
                     >
                       Username:
                     </label>
@@ -147,7 +147,7 @@ const Auth = ({ register }) => {
                           username: e.target.value,
                         })
                       }
-                      className="px-5 py-3 outline-none border-2 border-slate-700 bg-[#202030] rounded-2xl"
+                      className="sm:px-5 text-white px-3 py-2 sm:py-3 outline-none border-2 border-slate-700 bg-[#202030] rounded-2xl"
                     />
                   </motion.div>
                 )}
@@ -156,16 +156,19 @@ const Auth = ({ register }) => {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex items-center justify-center gap-10 mt-5"
+                className="flex items-center justify-center sm:gap-10  mt-5"
               >
-                <label htmlFor="" className="text-2xl font-semibold text-white">
+                <label
+                  htmlFor=""
+                  className="sm:text-2xl text-lg font-semibold text-white"
+                >
                   Email:
                 </label>
                 <input
                   type="email"
                   placeholder="Enter Email"
                   value={userDetails.email}
-                  className="px-5 py-3 outline-none border-2 ms-12 border-slate-700 bg-[#202030] rounded-2xl"
+                  className="sm:px-5 px-3 text-white sm:py-3 py-2 outline-none border-2 ms-12 border-slate-700 bg-[#202030] rounded-2xl"
                   onChange={(e) =>
                     setUserDetails({ ...userDetails, email: e.target.value })
                   }
@@ -175,16 +178,19 @@ const Auth = ({ register }) => {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="flex items-center justify-center gap-10 mt-5 sm:mb-0 mb-5"
+                className="flex items-center justify-center sm:gap-14 gap-7 mt-5 sm:mb-0 mb-5"
               >
-                <label htmlFor="" className="text-2xl font-semibold text-white">
+                <label
+                  htmlFor=""
+                  className="sm:text-2xl text-lg font-semibold text-white"
+                >
                   Password:
                 </label>
                 <input
                   type="password"
                   placeholder="Enter Password"
                   value={userDetails.password}
-                  className="px-5 py-3 outline-none border-2 border-slate-700 bg-[#202030] rounded-2xl"
+                  className="sm:px-5 sm:py-3 px-3 py-2 outline-none text-white border-2 border-slate-700 bg-[#202030] rounded-2xl"
                   onChange={(e) =>
                     setUserDetails({
                       ...userDetails,
