@@ -25,7 +25,7 @@ const Message = () => {
       <div className="absolute top-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
       <div className="flex-grow overflow-auto">
         <div className="flex flex-col gap-4 justify-start items-center pt-8 pb-8">
-          <div className="w-[40%] min-h-[30%] bg-slate-600 rounded-3xl mb-4 sm:py-10 py-5">
+          <div className="sm:w-[40%] w-[55%] min-h-[30%] bg-slate-600 rounded-3xl mb-4 sm:py-10 py-5">
             <Link
               to={"/messageForm"}
               className="flex gap-4 justify-center items-center "
@@ -45,7 +45,7 @@ const Message = () => {
               <motion.div
                 initial={{ y: -20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
                 className="msg-container w-[60%] min-h-[30%] bg-slate-600 rounded-3xl mb-4"
               >
                 <div className="top_profile w-full flex items-center bg-slate-400 rounded-2xl p-2">
