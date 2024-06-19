@@ -30,7 +30,7 @@ const MessageForm = () => {
       };
       const result = await messageUserAPI(messageObject, reqHeader);
       if (result.status >= 200 && result.status < 300) {
-        toast.success("User wow");
+        toast.success("Message Submited");
       } else {
         toast.warning("Error");
       }
