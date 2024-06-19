@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const iconVariants = {
   inital: { opacity: 0, y: -20 },
@@ -54,7 +55,7 @@ const Footer = () => {
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 100 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-xs sm:text-xl font-light mb-4"
+            className="text-xs sm:text-xl font-semibold mb-4"
           >
             Follow us on
           </motion.h3>
@@ -100,34 +101,40 @@ const Footer = () => {
           >
             Pages
           </motion.h3>
-          <div className="space-y-2">
-            <motion.p
-              custom={1}
-              initial="inital"
-              whileInView="animate"
-              variants={pageVariants}
-              className=" text-xs sm:text-xl font-light"
-            >
-              Register
-            </motion.p>
-            <motion.p
-              custom={2}
-              initial="inital"
-              whileInView="animate"
-              variants={pageVariants}
-              className=" text-xs sm:text-xl font-light"
-            >
-              Login
-            </motion.p>
-            <motion.p
-              custom={3}
-              initial="inital"
-              whileInView="animate"
-              variants={pageVariants}
-              className=" text-xs sm:text-xl font-light"
-            >
-              Secrets Arena
-            </motion.p>
+          <div className=" flex flex-col sm:gap-4 gap-7">
+            <Link to={"/register"}>
+              <motion.p
+                custom={1}
+                initial="inital"
+                whileInView="animate"
+                variants={pageVariants}
+                className=" text-xs sm:text-xl font-light"
+              >
+                Register
+              </motion.p>
+            </Link>
+            <Link to={"/login"}>
+              <motion.p
+                custom={2}
+                initial="inital"
+                whileInView="animate"
+                variants={pageVariants}
+                className=" text-xs sm:text-xl font-light"
+              >
+                Login
+              </motion.p>
+            </Link>
+            <Link to={"/messagesPage"}>
+              <motion.p
+                custom={3}
+                initial="inital"
+                whileInView="animate"
+                variants={pageVariants}
+                className=" text-xs sm:text-xl font-light"
+              >
+                Message Page
+              </motion.p>
+            </Link>
           </div>
         </div>
       </div>
